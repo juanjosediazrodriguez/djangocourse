@@ -1,0 +1,20 @@
+{% extends 'pages/base.html' %}
+{% block title %}Producto Creado{% endblock %}
+{% block header_title %}¡Éxito!{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="alert alert-success text-center" role="alert">
+                <h4 class="alert-heading">¡Producto Creado!</h4>
+                <p>El producto ha sido creado exitosamente.</p>
+                <hr>
+                <p class="mb-0">
+                    <a href="{% url 'form' %}" class="btn btn-primary">Crear Otro Producto</a>
+                    <a href="{% url 'index' %}" class="btn btn-secondary">Ver Productos</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
