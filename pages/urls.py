@@ -6,7 +6,8 @@ from .views import (
     ProductIndexView, 
     ProductShowView,
     ProductCreateView,
-    ProductSuccessView
+    ProductSuccessView,
+    ProductListView
 )
 
 urlpatterns = [
@@ -16,5 +17,8 @@ urlpatterns = [
     path('products/', ProductIndexView.as_view(), name='index'),
     path('products/create', ProductCreateView.as_view(), name='form'),
     path('products/success', ProductSuccessView.as_view(), name='success'),
+    path('products/list', ProductListView.as_view(), name='product-list'),
     path('products/<str:id>', ProductShowView.as_view(), name='show'),
+    
+
 ]
